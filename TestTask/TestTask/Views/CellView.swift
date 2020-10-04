@@ -22,13 +22,7 @@ class CellView: UICollectionViewCell {
     //Text views init
     private var textView: UITextView = {
         let textView = UITextView()
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.isScrollEnabled = false
-        textView.isEditable = false
-        textView.text = ""
-        textView.textColor = .black
-        textView.backgroundColor = .none
-        textView.font = UIFont.systemFont(ofSize: largeFont)
+        textView.standartSetup(ofSize: largeFont)
         
         return textView
         
@@ -36,13 +30,7 @@ class CellView: UICollectionViewCell {
     
     private var dateView: UITextView = {
         let dateView = UITextView()
-        dateView.translatesAutoresizingMaskIntoConstraints = false
-        dateView.isScrollEnabled = false
-        dateView.isEditable = false
-        dateView.text = ""
-        dateView.textColor = .black
-        dateView.backgroundColor = .none
-        dateView.font = UIFont.systemFont(ofSize: smallFont)
+        dateView.standartSetup(ofSize: smallFont)
         
         return dateView
         
@@ -50,13 +38,7 @@ class CellView: UICollectionViewCell {
     
     private var isWatchedView: UITextView = {
         let watchView = UITextView()
-        watchView.translatesAutoresizingMaskIntoConstraints = false
-        watchView.isScrollEnabled = false
-        watchView.isEditable = false
-        watchView.text = ""
-        watchView.textColor = .black
-        watchView.backgroundColor = .none
-        watchView.font = UIFont.systemFont(ofSize: smallFont)
+        watchView.standartSetup(ofSize: smallFont)
         
         return watchView
         

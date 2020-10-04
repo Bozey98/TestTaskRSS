@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF24D30D252A457600FAF935 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24D30C252A457600FAF935 /* Extension+UIView.swift */; };
 		CF24D310252A46A100FAF935 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24D30F252A46A100FAF935 /* Extension+String.swift */; };
+		CF37A41A252A8E52005ED45B /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37A419252A8E52005ED45B /* Extension+UITextView.swift */; };
 		CF51E20225289C74007A621E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E20125289C74007A621E /* AppDelegate.swift */; };
 		CF51E20425289C74007A621E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E20325289C74007A621E /* SceneDelegate.swift */; };
 		CF51E20625289C74007A621E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E20525289C74007A621E /* CollectionViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		CF24D30C252A457600FAF935 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		CF24D30F252A46A100FAF935 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		CF37A419252A8E52005ED45B /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
 		CF51E1FE25289C74007A621E /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF51E20125289C74007A621E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF51E20325289C74007A621E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				CF51E2182528A222007A621E /* RSSParser.swift */,
 				CF24D30C252A457600FAF935 /* Extension+UIView.swift */,
 				CF24D30F252A46A100FAF935 /* Extension+String.swift */,
+				CF37A419252A8E52005ED45B /* Extension+UITextView.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				CF51E20225289C74007A621E /* AppDelegate.swift in Sources */,
 				CF24D310252A46A100FAF935 /* Extension+String.swift in Sources */,
 				CF51E20425289C74007A621E /* SceneDelegate.swift in Sources */,
+				CF37A41A252A8E52005ED45B /* Extension+UITextView.swift in Sources */,
 				CF51E2192528A222007A621E /* RSSParser.swift in Sources */,
 				CF6173B32529F90600F80CBD /* DetailViewController.swift in Sources */,
 			);

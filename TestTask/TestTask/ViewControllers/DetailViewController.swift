@@ -14,29 +14,15 @@ class DetailViewController: UIViewController {
     //Texts views init
     private var titleView: UITextView = {
         let titleView = UITextView()
-        titleView.translatesAutoresizingMaskIntoConstraints = false
-        titleView.isScrollEnabled = false
-        titleView.isEditable = false
-        titleView.text = ""
-        titleView.textColor = .black
-        titleView.backgroundColor = .none
-        titleView.font = UIFont.boldSystemFont(ofSize: 30)
-        
-        
+        titleView.standartSetup(ofSize: 30)
+
         return titleView
         
     }()
     
     private var dateView: UITextView = {
         let dateView = UITextView()
-        dateView.layer.masksToBounds = true
-        dateView.translatesAutoresizingMaskIntoConstraints = false
-        dateView.isScrollEnabled = false
-        dateView.isEditable = false
-        dateView.text = ""
-        dateView.textColor = .black
-        dateView.backgroundColor = .none
-        dateView.font = UIFont.systemFont(ofSize: 12)
+        dateView.standartSetup(ofSize: 12)
         
         return dateView
         
@@ -44,13 +30,7 @@ class DetailViewController: UIViewController {
     
     private var descriptionView : UITextView = {
         let descriptionView = UITextView()
-        descriptionView.translatesAutoresizingMaskIntoConstraints = false
-        descriptionView.isScrollEnabled = false
-        descriptionView.isEditable = false
-        descriptionView.text = ""
-        descriptionView.textColor = .black
-        descriptionView.backgroundColor = .none
-        descriptionView.font = UIFont.systemFont(ofSize: 20)
+        descriptionView.standartSetup(ofSize: 20)
         
         return descriptionView
         
