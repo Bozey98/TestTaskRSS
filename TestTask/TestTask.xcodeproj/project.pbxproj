@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF08B5162544427A00FB8D0A /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF08B5152544427A00FB8D0A /* Extension+UIButton.swift */; };
 		CF24D30D252A457600FAF935 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24D30C252A457600FAF935 /* Extension+UIView.swift */; };
 		CF24D310252A46A100FAF935 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF24D30F252A46A100FAF935 /* Extension+String.swift */; };
+		CF29C3BE254214B100AA8D65 /* Extension+UIVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C3BD254214B100AA8D65 /* Extension+UIVIewController.swift */; };
+		CF29C3C125421BCD00AA8D65 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C3C025421BCD00AA8D65 /* SourceViewController.swift */; };
+		CF29C3D72542318700AA8D65 /* AddSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C3D62542318700AA8D65 /* AddSourceView.swift */; };
+		CF29C3DA2542334800AA8D65 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C3D92542334800AA8D65 /* TableViewController.swift */; };
+		CF29C3DD254233F000AA8D65 /* AddSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29C3DC254233F000AA8D65 /* AddSourceViewController.swift */; };
 		CF37A41A252A8E52005ED45B /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37A419252A8E52005ED45B /* Extension+UITextView.swift */; };
 		CF51E20225289C74007A621E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E20125289C74007A621E /* AppDelegate.swift */; };
 		CF51E20425289C74007A621E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E20325289C74007A621E /* SceneDelegate.swift */; };
@@ -19,11 +25,18 @@
 		CF51E21C2528FB9B007A621E /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E21B2528FB9B007A621E /* CellView.swift */; };
 		CF6173AF252924E400F80CBD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6173AE252924E400F80CBD /* PostModel.swift */; };
 		CF6173B32529F90600F80CBD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6173B22529F90600F80CBD /* DetailViewController.swift */; };
+		CF9FB96D25431AEE00E8859F /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB96C25431AEE00E8859F /* SourcesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF08B5152544427A00FB8D0A /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		CF24D30C252A457600FAF935 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		CF24D30F252A46A100FAF935 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		CF29C3BD254214B100AA8D65 /* Extension+UIVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIVIewController.swift"; sourceTree = "<group>"; };
+		CF29C3C025421BCD00AA8D65 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		CF29C3D62542318700AA8D65 /* AddSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceView.swift; sourceTree = "<group>"; };
+		CF29C3D92542334800AA8D65 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CF29C3DC254233F000AA8D65 /* AddSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceViewController.swift; sourceTree = "<group>"; };
 		CF37A419252A8E52005ED45B /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
 		CF51E1FE25289C74007A621E /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF51E20125289C74007A621E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +49,7 @@
 		CF51E21B2528FB9B007A621E /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		CF6173AE252924E400F80CBD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		CF6173B22529F90600F80CBD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CF9FB96C25431AEE00E8859F /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,9 @@
 			children = (
 				CF51E20525289C74007A621E /* CollectionViewController.swift */,
 				CF6173B22529F90600F80CBD /* DetailViewController.swift */,
+				CF29C3C025421BCD00AA8D65 /* SourceViewController.swift */,
+				CF29C3D92542334800AA8D65 /* TableViewController.swift */,
+				CF29C3DC254233F000AA8D65 /* AddSourceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -71,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				CF51E21B2528FB9B007A621E /* CellView.swift */,
+				CF29C3D62542318700AA8D65 /* AddSourceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -79,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6173AE252924E400F80CBD /* PostModel.swift */,
+				CF9FB96C25431AEE00E8859F /* SourcesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +109,8 @@
 				CF24D30C252A457600FAF935 /* Extension+UIView.swift */,
 				CF24D30F252A46A100FAF935 /* Extension+String.swift */,
 				CF37A419252A8E52005ED45B /* Extension+UITextView.swift */,
+				CF29C3BD254214B100AA8D65 /* Extension+UIVIewController.swift */,
+				CF08B5152544427A00FB8D0A /* Extension+UIButton.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -195,14 +216,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF51E20625289C74007A621E /* CollectionViewController.swift in Sources */,
+				CF29C3DD254233F000AA8D65 /* AddSourceViewController.swift in Sources */,
+				CF9FB96D25431AEE00E8859F /* SourcesModel.swift in Sources */,
+				CF29C3DA2542334800AA8D65 /* TableViewController.swift in Sources */,
 				CF51E21C2528FB9B007A621E /* CellView.swift in Sources */,
 				CF24D30D252A457600FAF935 /* Extension+UIView.swift in Sources */,
 				CF6173AF252924E400F80CBD /* PostModel.swift in Sources */,
 				CF51E20225289C74007A621E /* AppDelegate.swift in Sources */,
+				CF29C3C125421BCD00AA8D65 /* SourceViewController.swift in Sources */,
 				CF24D310252A46A100FAF935 /* Extension+String.swift in Sources */,
+				CF29C3BE254214B100AA8D65 /* Extension+UIVIewController.swift in Sources */,
 				CF51E20425289C74007A621E /* SceneDelegate.swift in Sources */,
 				CF37A41A252A8E52005ED45B /* Extension+UITextView.swift in Sources */,
+				CF29C3D72542318700AA8D65 /* AddSourceView.swift in Sources */,
 				CF51E2192528A222007A621E /* RSSParser.swift in Sources */,
+				CF08B5162544427A00FB8D0A /* Extension+UIButton.swift in Sources */,
 				CF6173B32529F90600F80CBD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

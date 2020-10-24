@@ -9,27 +9,32 @@ import UIKit
 
 class RSSParser: NSObject, XMLParserDelegate {
     
-    var parser: XMLParser!
+    static let shared = RSSParser()
+    
+    private var parser: XMLParser!
+    
+    var siteTitle = ""
+    private var titileReady = true
     
     var posts: [Post] = []
-    var tempPost: Post? = nil
-    var tempElement: String?
-    let urlRSS = "https://www.finam.ru/net/analysis/conews/rsspoint"
+    private var tempPost: Post? = nil
+    private var tempElement: String?
+    private var urlRSS = "https://www.finam.ru/net/analysis/conews/rsspoint"
     
-    override init() {
+    private override init() {
         super.init()
-        guard let url = URL(string: urlRSS ) else { return }
-        parser = XMLParser(contentsOf: url)
-        parser.delegate = self
-        parser.parse()
-        print(posts)
+        initParsing()
+        
+    }
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("Heh")
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         tempElement = elementName
-            if elementName == "item" {
-                tempPost = Post()
-            }
+        if elementName == "item" {
+            tempPost = Post()
+        }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
@@ -39,6 +44,8 @@ class RSSParser: NSObject, XMLParserDelegate {
                 posts.append(post)
             }
             tempPost = nil
+        } else if elementName == "title" {
+            titileReady = false
         }
     }
     
@@ -52,6 +59,43 @@ class RSSParser: NSObject, XMLParserDelegate {
             } else if tempElement == "pubDate" {
                 tempPost?.pubDate = post.pubDate+string
             }
+        } else if titileReady {
+            if tempElement == "title" {
+                siteTitle += string
+            }
+            
+        }
+    }
+    
+    func reloadData(with url: String) {
+        self.urlRSS = url
+        initParsing()
+        print(siteTitle)
+    }
+    
+    func updateCurrentPage() {
+        initParsing()
+    }
+    
+    func initParsing() {
+        
+        print(urlRSS)
+        posts = []
+        siteTitle = ""
+        titileReady = true
+        guard let url = URL(string: self.urlRSS ) else {
+            siteTitle = "Wrong Resource"
+            return
+        }
+        parser = XMLParser(contentsOf: url)
+        parser.delegate = self
+        parser.parse()
+        checkContent()
+    }
+    
+    func checkContent() {
+        if posts.isEmpty {
+            self.siteTitle = "Ooops, some problems"
         }
     }
     

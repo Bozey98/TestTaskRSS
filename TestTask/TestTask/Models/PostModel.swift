@@ -26,7 +26,7 @@ class Post {
         self.title = self.title.removeHTML()
         self.description = self.description.removeHTML()
         self.pubDate = self.pubDate.removeHTML()
-        self.pubDate = String(self.pubDate.dropLast(10))
+        //self.pubDate = String(self.pubDate)
     }
     
     func watchPost() {

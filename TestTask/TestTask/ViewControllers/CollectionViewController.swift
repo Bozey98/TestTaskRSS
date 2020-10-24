@@ -9,7 +9,8 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout  {
     
-    var rss = RSSParser()
+    //var rss = RSSParser()
+    var sourcesModel = SourcesModel()
     
     private let refreshControl = UIRefreshControl()
     
@@ -17,7 +18,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         super.viewDidLoad()
         
         //Configure collectionView
-        title = "Top News Today"
+        title = RSSParser.shared.siteTitle
         self.collectionView.isUserInteractionEnabled = true
         collectionView.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView.register(CellView.self, forCellWithReuseIdentifier: CellView.id)
@@ -33,7 +34,11 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
         //Custom tap gesture -> standart don't work
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        
         self.collectionView.addGestureRecognizer(tap)
+        
+        setRightNavigatonMenuButton(with: #selector(self.handleTitleTap(_:)), image: UIImage(systemName: "slider.horizontal.3"))
+       
         
         //Pull to refresh init
         refreshControl.addTarget(self, action: #selector(self.refreshData(_:)), for: .valueChanged)
@@ -49,14 +54,14 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return rss.posts.count
+        return RSSParser.shared.posts.count
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellView.id, for: indexPath) as! CellView
-        cell.configure(with: rss.posts[indexPath.row])
+        cell.configure(with: RSSParser.shared.posts[indexPath.row])
         return cell
         
     }
@@ -64,7 +69,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         if let indexPath = self.collectionView?.indexPathForItem(at: sender.location(in: self.collectionView)) {
             
-            let pickedPost = rss.posts[indexPath.row]
+            let pickedPost = RSSParser.shared.posts[indexPath.row]
             pickedPost.watchPost()
             
             navigationController?.pushViewController(DetailViewController(pickedPost: pickedPost), animated: true)
@@ -76,10 +81,36 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         }
     }
     
+    @objc func handleTitleTap(_ sender: UITapGestureRecognizer) {
+        let vc = SourceViewController()
+        vc.sourcesModel = self.sourcesModel
+        vc.dissMissFunc = completionFunc
+
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .custom
+        navController.view.backgroundColor = UIColor(named: "RSSColor")
+        
+        present(navController, animated: true, completion: nil)
+        //navigationController?.pushViewController(vc, animated: true)
+        print("i am here")
+        
+    }
+    
+    func completionFunc() {
+        print(RSSParser.shared.posts.count)
+        self.collectionView.reloadData()
+        title = RSSParser.shared.siteTitle
+        
+    }
+    
+    
+    
     @objc func refreshData(_ sender: Any) {
-        self.rss = RSSParser()
+        RSSParser.shared.updateCurrentPage()
         self.collectionView.reloadData()
         self.refreshControl.endRefreshing()
     }
+    
+    
 
 }

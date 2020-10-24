@@ -59,7 +59,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func setupNavigationBar() {
         
-        let bgColor = UIColor(red: 42/255, green: 94/255, blue: 129/255, alpha: 1)
+        let bgColor = UIColor(named: "RSSColor")
         let fontSize = UIScreen.main.bounds.width / 17
         
         let attrs = [
@@ -75,7 +75,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //Back button color
         UINavigationBar.appearance().tintColor = .white
-          
+        
+        
+        
     }
     
 
