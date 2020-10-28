@@ -8,7 +8,11 @@
 import Foundation
 
 class SourcesModel {
-    var sources: [String]
+    var sources: [String] {
+        didSet {
+            NotificationCenter.default.post(Notification(name: Notification.Name.tableChangeValue))
+        }
+    }
     private(set) var currentSource: String
     
     init() {

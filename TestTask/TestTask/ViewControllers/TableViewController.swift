@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    private var observer: NSObjectProtocol?
     var sourcesModel: SourcesModel!
     var dissMissFunc: (() -> Void)!
 
@@ -17,11 +18,17 @@ class TableViewController: UITableViewController {
     
 
     override func viewDidLoad() {
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         view.anchor(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 9 * 7)
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        observer = NotificationCenter.default.addObserver(forName: Notification.Name.tableChangeValue, object: nil, queue: OperationQueue.main, using:  { _ in
+            self.tableView.reloadData()
+        })
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,4 +57,5 @@ class TableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         dissMissFunc()
     }
+
 }

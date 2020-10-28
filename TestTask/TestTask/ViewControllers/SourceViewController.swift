@@ -10,7 +10,7 @@ import UIKit
 
 class SourceViewController: UIViewController {
 
-    var tableVC = TableViewController()
+    private var tableVC = TableViewController()
     private var addSourceVC = AddSourceViewController()
     
     var sourcesModel: SourcesModel!

@@ -25,6 +25,7 @@
 		CF51E21C2528FB9B007A621E /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51E21B2528FB9B007A621E /* CellView.swift */; };
 		CF6173AF252924E400F80CBD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6173AE252924E400F80CBD /* PostModel.swift */; };
 		CF6173B32529F90600F80CBD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6173B22529F90600F80CBD /* DetailViewController.swift */; };
+		CF939B462549CC7C008DE0C6 /* Extension+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939B452549CC7C008DE0C6 /* Extension+Notification.swift */; };
 		CF9FB96D25431AEE00E8859F /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB96C25431AEE00E8859F /* SourcesModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		CF51E21B2528FB9B007A621E /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		CF6173AE252924E400F80CBD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		CF6173B22529F90600F80CBD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CF939B452549CC7C008DE0C6 /* Extension+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Notification.swift"; sourceTree = "<group>"; };
 		CF9FB96C25431AEE00E8859F /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				CF37A419252A8E52005ED45B /* Extension+UITextView.swift */,
 				CF29C3BD254214B100AA8D65 /* Extension+UIVIewController.swift */,
 				CF08B5152544427A00FB8D0A /* Extension+UIButton.swift */,
+				CF939B452549CC7C008DE0C6 /* Extension+Notification.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF939B462549CC7C008DE0C6 /* Extension+Notification.swift in Sources */,
 				CF51E20625289C74007A621E /* CollectionViewController.swift in Sources */,
 				CF29C3DD254233F000AA8D65 /* AddSourceViewController.swift in Sources */,
 				CF9FB96D25431AEE00E8859F /* SourcesModel.swift in Sources */,

@@ -82,9 +82,6 @@ class AddSourceViewController: UIViewController, UITextFieldDelegate {
     @objc func tapGesture(_ sender: UITapGestureRecognizer) {
         if !inputText.isEmpty {
             self.soucesModel.sources.append(self.inputText)
-            if let parent = parent as? SourceViewController {
-                parent.tableVC.tableView.reloadData()
-            }
             self.addSourceView.sampleTextField.text = ""
             inputText = ""
         }
